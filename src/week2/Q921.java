@@ -22,7 +22,7 @@ public class Q921 {
             }else{//')' 괄호일 경우
                 if(stack.isEmpty()){//왼쪽 괄호가 하나도 없으면 ')'은 잘못된 위치로 ')'를 tmp 에 담음
                     tmp.add(ch);
-                }else if(stack.peek()=='('){// ( )로 괄호가 짝이 맞아 ')'는 tmp 에 담지 않음
+                }else{// ( )로 괄호가 짝이 맞아 ')'는 tmp 에 담지 않음
                     stack.pop();//짝이 맞는 '('를 꺼냄
                 }
             }
