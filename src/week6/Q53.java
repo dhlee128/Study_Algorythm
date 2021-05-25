@@ -1,5 +1,5 @@
 package week6;
-
+//53. Maximum Subarray
 public class Q53 {
 
     public static void main(String[] args) {
@@ -7,27 +7,20 @@ public class Q53 {
         System.out.println(maxSubArray(nums));
     }
 
-    static int max;
     public static int maxSubArray(int[] nums) {
-
-        max=Integer.MIN_VALUE;
+        int max=Integer.MIN_VALUE;
 
         for(int i=0;i<nums.length;i++){
-            find(nums,i);
-        }
-
-        return max;
-    }
-
-    public static void find(int[] nums, int start) {
-
-        for(int i=start;i<nums.length;i++){
-            int sum=0;
-            int end=i;
-            for(int j=start;j<=end;j++){
-                sum+=nums[j];
+            if(nums[i]>=0){//합을 구하기위한 연속된 배열 시작은 0이상
+                int sum=0;
+                for(int j=i;j<nums.length;j++){
+                    sum+=nums[j];
+                    max=Math.max(max,sum);//최대 합 갱신
+                }
+            }else{//음수
+                max=Math.max(max,nums[i]);
             }
-            max=Math.max(max,sum);
         }
+        return max;
     }
 }
