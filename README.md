@@ -22,5 +22,8 @@
 |1|Minimum Size Subarray Sum||[Q209.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week7/Q209.java)| 
 |2|Sliding Window Median||[Q480.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week7/Q480.java)| 
 |3|Permutation in String||[Q567.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week7/Q567.java)|
+|||||
+|1|Search a 2D Matrix||[Q74.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week9/Q74.java)| 
+|2|Move Zeroes||[Q283.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week9/Q283.java)| 
 
 
