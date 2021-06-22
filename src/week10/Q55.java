@@ -3,28 +3,20 @@ package week10;
 //55. Jump Game
 public class Q55 {
     public static void main(String[] args) {
-        int[] nums={1,2};
+        int[] nums={3,0,8,2,0,0,1};
         System.out.println(canJump(nums));
     }
-
-    static boolean flag=false;
     public static boolean canJump(int[] nums) {
-        if(nums.length==1){
-            return true;
-        }
-        jump(nums,nums.length-1);
-        return flag;
-    }
+        int idx=nums.length-1;
 
-    public static void jump(int[] nums, int idx){
+        if(idx==-1) return true;
 
-        for(int i=0; i<idx; i++){
-            for(int j=1;j<=nums[i];j++){
-                if(i+j==idx){
-                    if(i==0) flag=true;
-                    jump(nums, i);
-                }
-            }
+        for(int i=idx-1;i>=0;i--){
+            if(nums[i]+i>=idx) idx=i;
         }
+
+        if(idx==0) return true;
+
+        return false;
     }
 }
