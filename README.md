@@ -25,5 +25,10 @@
 |||||
 |1|Search a 2D Matrix||[Q74.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week9/Q74.java)| 
 |2|Move Zeroes||[Q283.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week9/Q283.java)| 
-
+|||||
+|1|Symmetric Tree||[Q101.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week10/Q101.java)| 
+|2|Jump Game||[Q55.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week10/Q55.java)| 
+|||||
+|1|Binary Number with Alternating Bits||[Q693.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week11/Q693.java)| 
+|2|Push Dominoes||[Q838.java](https://github.com/dhlee128/study_algorythm/blob/master/src/week11/Q838.java)|
 
