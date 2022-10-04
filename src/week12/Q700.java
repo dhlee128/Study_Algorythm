@@ -1,7 +1,5 @@
 package week12;
 
-import com.sun.source.tree.Tree;
-
 //700. Search in a Binary Search Tree
 public class Q700 {
 
