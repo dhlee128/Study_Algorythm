@@ -14,25 +14,30 @@ public class Q19 {
     }
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        List<Integer> list = new ArrayList<>();
-        while(head!=null) {
-            list.add(head.val);
-            head = head.next;
-        }
-        int size = list.size();
+        ListNode res = head;
 
-        ListNode res = new ListNode();
+        ListNode head1 = head;
+        ListNode head2 = head;
+
         ListNode temp = res;
 
-
-        for(int i=0; i<list.size();i++){
-            if(i!=(size-n)){//n-size 제외
-                System.out.println(list.get(i));
-                temp.next = new ListNode(list.get(i));
-                temp = temp.next;
-            }
+        for(int i=0; i<n; i++) {
+            if(head2.next==null) return res.next;
+            head2 = head2.next;
         }
 
-        return res.next;
+        while(true) {
+            if(head2.next == null) break;
+            head1=head1.next;
+            head2=head2.next;
+        }
+
+        while(head1!=temp) {
+            temp = temp.next;
+        }
+
+        temp.next = head1.next.next;
+
+        return res;
     }
 }
