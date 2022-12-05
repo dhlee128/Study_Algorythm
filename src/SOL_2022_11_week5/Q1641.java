@@ -23,7 +23,7 @@ public class Q1641 {
     }
 
     public static void main(String[] args) {
-        int n=2;
+        int n=3;
         System.out.println(countVowelStrings(n));
     }
 }
