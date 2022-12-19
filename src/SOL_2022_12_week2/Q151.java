@@ -4,31 +4,18 @@ import java.util.Stack;
 
 public class Q151 {
     public static String reverseWords(String s) {
-        Stack<String> stack = new Stack<>();
-        String ss = "";
-        s = s.trim();
-        for(int i=0; i<s.length(); i++) {
-            char c = s.charAt(i);
-            if(c==' ') {
-                stack.add(ss);
-                ss = "";
-            } else {
-                ss+=c;
-            }
+        String[] array = s.split(" ");
+        StringBuilder result = new StringBuilder();
+        System.out.println(array[0]+","+array[1]+","+array[2]+","+array[3]+","+array[4]);
+        for(String word : array) {
+            StringBuilder sb = new StringBuilder(word);
+            result.append(sb.reverse() + " ");
         }
-        stack.add(ss);
-
-        String str = "";
-        while(!stack.isEmpty()) {
-            String temp = stack.pop();
-            if(temp!="") str+=(temp+" ");
-        }
-
-        return str.trim();
+        return result.reverse().toString().trim();
     }
 
     public static void main(String[] args) {
-        String s = "the sky is blue";
+        String s = "a good   example";
         System.out.println(reverseWords(s));
     }
 }
