@@ -1,9 +1,9 @@
-package SOL_2022_12_wek1;
+package SOL_2022_12_week1;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Q144 {
+public class Q415 {
     public class TreeNode {
         int val;
         TreeNode left;
@@ -17,16 +17,16 @@ public class Q144 {
         }
     }
 
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
-        preorder(root, list);
+
+        postorder(root, list);
         return list;
     }
 
-    public void preorder(TreeNode root, List<Integer> list) {
-        if(root==null) return;
-        list.add(root.val);
-        preorder(root.left, list);
-        preorder(root.right, list);
+    public void postorder(TreeNode node, List<Integer> list) {
+        postorder(node.left, list);
+        postorder(node.right, list);
+        list.add(node.val);
     }
 }

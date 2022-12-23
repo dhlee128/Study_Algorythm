@@ -1,4 +1,4 @@
-package SOL_2022_12_wek1;
+package SOL_2022_12_week1;
 
 import java.util.HashSet;
 import java.util.Set;

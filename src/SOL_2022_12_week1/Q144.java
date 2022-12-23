@@ -1,13 +1,9 @@
-package SOL_2022_12_wek1;
-
-import sun.reflect.generics.tree.Tree;
+package SOL_2022_12_week1;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Queue;
-import java.util.Stack;
 
-public class Q415 {
+public class Q144 {
     public class TreeNode {
         int val;
         TreeNode left;
@@ -21,16 +17,16 @@ public class Q415 {
         }
     }
 
-    public List<Integer> postorderTraversal(TreeNode root) {
+    public List<Integer> preorderTraversal(TreeNode root) {
         List<Integer> list = new ArrayList<>();
-
-        postorder(root, list);
+        preorder(root, list);
         return list;
     }
 
-    public void postorder(TreeNode node, List<Integer> list) {
-        postorder(node.left, list);
-        postorder(node.right, list);
-        list.add(node.val);
+    public void preorder(TreeNode root, List<Integer> list) {
+        if(root==null) return;
+        list.add(root.val);
+        preorder(root.left, list);
+        preorder(root.right, list);
     }
 }

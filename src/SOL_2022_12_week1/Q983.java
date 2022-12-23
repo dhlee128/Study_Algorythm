@@ -1,4 +1,4 @@
-package SOL_2022_12_wek1;
+package SOL_2022_12_week1;
 
 public class Q983 {
     public static int mincostTickets(int[] days, int[] costs) {

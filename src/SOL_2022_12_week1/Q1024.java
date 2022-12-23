@@ -1,4 +1,4 @@
-package SOL_2022_12_wek1;
+package SOL_2022_12_week1;
 
 //https://leetcode.com/problems/video-stitching/description/
 public class Q1024 {
